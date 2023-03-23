@@ -90,3 +90,114 @@ def disableButton():
     bu7.state(['disabled'])
     bu8.state(['disabled'])
     bu9.state(['disabled'])
+
+
+
+
+def ButtonClick(id):
+    global a,b,c
+    print("ID:{}".format(id))
+
+    #for player 1 turn
+    if id==1 and bu1['text']==' ' and a==1:
+        bu1['text']="X"
+        a=0
+        b+=1
+    if id==2 and bu2['text']==' ' and a==1:
+        bu2['text']="X"
+        a=0
+        b+=1
+    if id==3 and bu3['text']==' ' and a==1:
+        bu3['text']="X"
+        a=0
+        b+=1
+    if id==4 and bu4['text']==' ' and a==1:
+        bu4['text']="X"
+        a=0
+        b+=1
+    if id==5 and bu5['text']==' ' and a==1:
+        bu5['text']="X"
+        a=0
+        b+=1
+    if id==6 and bu6['text']==' ' and a==1:
+        bu6['text']="X"
+        a=0
+        b+=1
+    if id==7 and bu7['text']==' ' and a==1:
+        bu7['text']="X"
+        a=0
+        b+=1
+    if id==8 and bu8['text']==' ' and a==1:
+        bu8['text']="X"
+        a=0
+        b+=1
+    if id==9 and bu9['text']==' ' and a==1:
+        bu9['text']="X"
+        a=0
+        b+=1
+    #for player 2 turn
+    if id==1 and bu1['text']==' ' and a==0:
+        bu1['text']="O"
+        a=1
+        b+=1
+    if id==2 and bu2['text']==' ' and a==0:
+        bu2['text']="O"
+        a=1
+        b+=1
+    if id==3 and bu3['text']==' ' and a==0:
+        bu3['text']="O"
+        a=1
+        b+=1
+    if id==4 and bu4['text']==' ' and a==0:
+        bu4['text']="O"
+        a=1
+        b+=1
+    if id==5 and bu5['text']==' ' and a==0:
+        bu5['text']="O"
+        a=1
+        b+=1
+    if id==6 and bu6['text']==' ' and a==0:
+        bu6['text']="O"
+        a=1
+        b+=1
+    if id==7 and bu7['text']==' ' and a==0:
+        bu7['text']="O"
+        a=1
+        b+=1
+    if id==8 and bu8['text']==' ' and a==0:
+        bu8['text']="O"
+        a=1
+        b+=1
+    if id==9 and bu9['text']==' ' and a==0:
+        bu9['text']="O"
+        a=1
+        b+=1
+        
+    #checking for winner   
+    if( bu1['text']=='X' and bu2['text']=='X' and bu3['text']=='X' or
+        bu4['text']=='X' and bu5['text']=='X' and bu6['text']=='X' or
+        bu7['text']=='X' and bu8['text']=='X' and bu9['text']=='X' or
+        bu1['text']=='X' and bu4['text']=='X' and bu7['text']=='X' or
+        bu2['text']=='X' and bu5['text']=='X' and bu8['text']=='X' or
+        bu3['text']=='X' and bu6['text']=='X' and bu9['text']=='X' or
+        bu1['text']=='X' and bu5['text']=='X' and bu9['text']=='X' or
+        bu3['text']=='X' and bu5['text']=='X' and bu7['text']=='X'):
+            disableButton()
+            c=1
+            tkinter.messagebox.showinfo("Tic Tac Toe","Winner is player 1")
+    elif( bu1['text']=='O' and bu2['text']=='O' and bu3['text']=='O' or
+        bu4['text']=='O' and bu5['text']=='O' and bu6['text']=='O' or
+        bu7['text']=='O' and bu8['text']=='O' and bu9['text']=='O' or
+        bu1['text']=='O' and bu4['text']=='O' and bu7['text']=='O' or
+        bu2['text']=='O' and bu5['text']=='O' and bu8['text']=='O' or
+        bu3['text']=='O' and bu6['text']=='O' and bu9['text']=='O' or
+        bu1['text']=='O' and bu5['text']=='O' and bu9['text']=='O' or
+        bu3['text']=='O' and bu5['text']=='O' and bu7['text']=='O'):
+            disableButton()
+            c=1
+            tkinter.messagebox.showinfo("Tic Tac Toe","Winner is player 2")
+    elif b==9:
+            disableButton()
+            c=1
+            tkinter.messagebox.showinfo("Tic Tac Toe","Match is Draw.")
+    
