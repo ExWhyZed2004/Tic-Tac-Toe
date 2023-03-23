@@ -200,4 +200,11 @@ def ButtonClick(id):
             disableButton()
             c=1
             tkinter.messagebox.showinfo("Tic Tac Toe","Match is Draw.")
-    
+
+
+    if a==1 and c==0:
+        playerturn['text']="   Player 1 turn!   "
+    elif a==0 and c==0:
+        playerturn['text']="   Player 2 turn!   "
+            
+root.mainloop()    
